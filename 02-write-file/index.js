@@ -11,6 +11,7 @@ rl.addListener('close', () => {
 });
 
 var text = '';
+fs.writeFile(__dirname + '/user-input.txt', text);
  
 function waitForUserInput() {
   rl.question('Enter some text: ', async answer => {
